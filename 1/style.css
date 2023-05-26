@@ -1,13 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --orange: #FCE8CC;
+    --orange2: #d9c7af;
+    --green: #DDFCCC;
+    --blue: #CCEAFC;
+    --purple: #FCD9FC;
+    --pale: #FDF4E7;
+}
+
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
+body {
+    height: 100vw;
+    background-color: var(--pale);
+    font-family: 'Raleway', sans-serif;
+}
+
 img {display: block;}
 
+
 ul {
-    background-color: black;
+    background-color: var(--orange);
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -16,11 +34,18 @@ ul {
 }
 
 li {
+    background-color: var(--orange);
     border-radius: 0.5rem 0.01rem 0.5rem 0.01rem;
-    background-color: white;
+    outline: 1px solid #333;
     margin: 1rem 0;
     width: 4rem;
     height: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+nav li:hover {
+    box-shadow: 0.2rem 0.2rem 0.2rem var(--green);
+    transform: scale(1.1);
 }
 
 li a {
@@ -45,8 +70,13 @@ li a {
     border: 0.05rem solid #333;
     border-radius: 2rem 0.1rem 2rem 0.1rem;
     max-width: 28rem;
-    box-shadow: 0.1rem 0.1rem 2rem hsla(0, 2%, 28%, 0.527);
-    
+    box-shadow: 0.1rem 0.1rem 1rem var(--blue);
+    transition: all .1s linear;
+}
+
+.card:hover {
+    box-shadow: 0.1rem 0.1rem 6rem var(--purple);
+    transform: scale(1.01);
 }
 
 .card-inside {
@@ -57,13 +87,21 @@ li a {
 }
 
 .card img {
-    border: 0.05rem solid #333;
+    border: 0.1rem solid #333;
     border-radius: 50%;
     margin: 2rem;
     width: 100%;
     align-self: center;
-    filter: drop-shadow(0 0 0.75rem #33333366);
+    filter: drop-shadow(0 0 2rem #33333353);
+    
 }
 
 
+footer {
+    padding: 1.5rem;
+    background-color: var(--orange);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
