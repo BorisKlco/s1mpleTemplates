@@ -16,13 +16,11 @@
 }
 
 body {
-    height: 100vw;
     background-color: var(--pale);
     font-family: 'Raleway', sans-serif;
 }
 
 img {display: block;}
-
 
 ul {
     background-color: var(--orange);
@@ -56,12 +54,17 @@ li a {
     text-decoration: none;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 .cards {
     margin: 4rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 75%;
     gap: 2rem;
 }
 
@@ -98,6 +101,7 @@ li a {
 
 
 footer {
+    font-size: 1.25rem;
     padding: 1.5rem;
     background-color: var(--orange);
     width: 100%;
@@ -105,3 +109,6 @@ footer {
     justify-content: center;
 }
 
+footer a {
+    text-decoration: none;
+}
