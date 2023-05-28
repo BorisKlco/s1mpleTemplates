@@ -10,6 +10,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+img {display: block;}
+
 nav {
     padding: 1rem 2rem;
     display: flex;
@@ -64,14 +66,12 @@ nav a:hover {
 
 section {
     background: rgb(208,191,233);
-    background: linear-gradient(98deg, rgba(208,191,233,0.40379901960784315) 0%, rgba(235,229,199,0.30015756302521013) 100%);
+    background: linear-gradient(90deg, rgba(208,191,233,0.40379901960784315) 0%, rgba(235,229,199,0.30015756302521013) 100%);
     width: 100%;
-    display: flex;
-    justify-content: center;
+    padding-top: 4rem;
 }
 
 section div {
-    margin-top: 4rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -109,6 +109,19 @@ section div {
     gap:1rem;
 }
 
+.intro .pInfo {
+    opacity: 75%;
+    padding-top:2rem;
+    flex-direction: row;
+    gap:2rem;
+    color:#333;
+}
+
+.intro .pInfo p {
+    font-size:1rem;
+    letter-spacing: normal;
+}
+
 .buttons a {
     font-size: 1rem;
     font-weight: bolder;
@@ -129,4 +142,50 @@ section div {
 .buttons a:last-child {
     color:darkorange;
     outline: 1px solid darkorange;
+}
+
+.icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding-top:6rem;
+}
+
+.iconLogo {
+    max-width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #33333335;
+    border-radius: 1rem;
+    color: black;
+    background-color: white;
+}
+
+.iconLogo img {
+    
+    display: flex;
+}
+
+.iconLogo p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.videoSection {
+    margin: 4rem 0;
+}
+
+.videoSection .video {
+    width: 75%;
+}
+
+.videoSection video {
+    outline: 0.1rem solid #33333335;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.6rem #33333320;
+    width: 100%;
+    height: auto;
 }
