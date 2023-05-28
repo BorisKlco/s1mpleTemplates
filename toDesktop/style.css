@@ -11,39 +11,44 @@ body {
 }
 
 nav {
-    outline: 1px solid red;
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    outline: 1px solid #33333351;
-    box-shadow: 0 0 0.4rem #33333351;
 }
 
 nav .logo {
+    margin: 0 0.2rem;
     font-size: 2rem;
 }
 
 nav .navButton {
     margin-right: 0.5rem;
-    padding: 0 0.5rem;
-    outline: 1px solid #33333351;
+    padding: 0 1rem;
+    outline: 1px solid #33333335;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0.4rem #33333351;
+    box-shadow: 0 0 0.2rem #33333320;
 }
 
 nav h2 {
+    padding: 0 0.5rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
 }
 
 nav ul {
+    padding-left:2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     list-style-type: none;
     gap: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+nav li {
+    margin-left: 1rem;
 }
 
 nav a {
@@ -57,3 +62,70 @@ nav a:hover {
     color:blue;
 }
 
+section {
+    background: rgb(208,191,233);
+    background: linear-gradient(98deg, rgba(208,191,233,0.40379901960784315) 0%, rgba(235,229,199,0.30015756302521013) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section div {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    display: block;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.intro p {
+    display: block;
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.intro .nowrap {
+    display: block;
+    white-space: nowrap;
+}
+.intro span {
+    display: block;
+}
+.intro .buttons {
+    margin-top:0;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.buttons a {
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 1rem 2rem;
+    outline: 1px solid #33333351;
+    background-color: white;
+    color:black;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.buttons a:nth-child(1) {
+    background-color: blue;
+    outline: 1px solid blue;
+    color: white;
+}
+
+.buttons a:last-child {
+    color:darkorange;
+    outline: 1px solid darkorange;
+}
