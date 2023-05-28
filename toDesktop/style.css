@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -85,6 +85,7 @@ section div {
     margin: 1.5rem 1rem 1.5rem 1rem;
     font-size: 4rem;
     text-align: center;
+    line-height: 100%;
 }
 
 .intro p {
