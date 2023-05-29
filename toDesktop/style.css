@@ -161,11 +161,13 @@ section div {
     flex-wrap: wrap;
     gap:1rem;
     padding-top:6rem;
+    width: 75%;
+    margin:auto;
 }
 
 .iconLogo {
-    max-width: 10rem;
-    height: 10rem;
+    max-width: 8rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,7 +178,7 @@ section div {
 }
 
 .iconLogo img {
-    
+    width: 50%;
     display: flex;
 }
 
@@ -187,11 +189,11 @@ section div {
 }
 
 .videoSection {
-    margin: 4rem 0;
+    margin: 6rem 0;
 }
 
 .videoSection .video {
-    width: 75%;
+    width: 50%;
 }
 
 .videoSection video {
