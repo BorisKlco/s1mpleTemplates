@@ -20,8 +20,7 @@ nav {
 }
 
 nav .logo {
-    margin: 0 0.2rem;
-    font-size: 2rem;
+    margin-right: 1rem;
 }
 
 nav .navButton {
@@ -30,6 +29,10 @@ nav .navButton {
     outline: 1px solid #33333335;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.2rem #33333320;
+}
+
+nav .navButton svg {
+    margin-right: 0.5rem;
 }
 
 nav h2 {
@@ -140,8 +143,17 @@ section div {
 }
 
 .buttons a:last-child {
-    color:darkorange;
-    outline: 1px solid darkorange;
+    margin:0;
+    padding:0.5rem 1rem;
+    color:red;
+    border: 1px solid red;
+    display: flex;
+    align-items: flex-end;
+    gap:0.5rem;
+}
+
+.buttons svg {
+    display: inline-block;
 }
 
 .icons {
