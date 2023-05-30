@@ -29,6 +29,7 @@ body::-webkit-scrollbar-thumb {
     margin: auto;
     position: sticky;
     background:white;
+    z-index: 9999;
 }
 
 .headShadow {
@@ -94,9 +95,62 @@ nav ul {
     color:white;
 }
 
-.intro {
-    margin-top: 8rem;
+/*INTRO ------------------------------------ */
+
+.floatingLeft {
+    width: 40%;
+    
 }
+
+.floatingRight {
+    width: 40%;
+    margin-left:60%;
+    
+}
+
+.floatingLeft div {
+    transform: translateY(15rem);
+    margin:auto;
+    width:85px;
+    height: 85px;
+    background-image: url(https://wiza-edge.b-cdn.net/_nuxt/img/emf_avatar_4.2cecb86.png);
+}
+
+.floatingRight div {
+    transform: translateY(15rem);
+    margin:auto;
+    width:85px;
+    height: 85px;
+    background-image: url(https://wiza-edge.b-cdn.net/_nuxt/img/emf_avatar_8.5d34927.png);
+}
+
+.animate {
+    animation-name: floatingImg;
+    animation-duration: 2.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.animateDelay {
+    animation-delay: 0.5s;
+}
+
+@keyframes floatingImg {
+    0% {
+        transform: translateY(15rem)
+    }
+
+    50% {
+        transform: translateY(16rem)
+    }
+
+    to {
+        transform: translateY(15rem)
+    }
+}
+
+
 
 .intro .info {
     font-family: 'Montserrat', sans-serif;
@@ -128,9 +182,9 @@ nav ul {
 .intro .buttons a {
     display: flex;
     align-items: center;
-    gap:0.5rem;
+    gap:0.75rem;
     text-decoration: none;
-    padding: 0.4rem 0.75rem 0.5rem;
+    padding: 0.4rem 1rem 0.5rem;
     border: 1px solid black;
     border-radius: 0.5rem;
     background-color: black;
