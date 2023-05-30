@@ -99,12 +99,13 @@ nav ul {
 
 .floatingLeft {
     width: 40%;
+    display: inline-block;
     
 }
 
 .floatingRight {
-    width: 40%;
-    margin-left:60%;
+    width: 59%;
+    display: inline-block;
     
 }
 
@@ -118,7 +119,7 @@ nav ul {
 
 .floatingRight div {
     transform: translateY(15rem);
-    margin:auto;
+    margin-left:60%;;
     width:85px;
     height: 85px;
     background-image: url(https://wiza-edge.b-cdn.net/_nuxt/img/emf_avatar_8.5d34927.png);
