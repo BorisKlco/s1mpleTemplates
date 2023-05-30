@@ -8,45 +8,22 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    padding: 10%;
+}
+
 main {
-    margin: 10% auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    border-radius: 2rem;
-    outline: 1px solid red;
+    
     
 }
 
-:is(.left, .right) {
-    padding: 1rem 2rem;
-    min-width: 180px;
-    min-height: 500px;
-    max-width: 300px;
-    max-height: 500px;
-}
-
-main {
-    min-width: 360px;
-    max-width: 600px;
-}
 
 .left {
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    outline: 1px solid black;
-    border-radius: 2rem;
+    
 }
 
 .right {
-    width: 300px;
-    display: flex;
-    flex-flow: column nowrap;
-    outline: 1px solid black;
+    
 
 }
 
