@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <section class="head">
+    <section id="headShadow" class="head">
       <nav>
         <div class="leftHead">
           <img
@@ -51,4 +51,15 @@
       </nav>
     </section>
   </body>
+  <script>
+    window.addEventListener("scroll", () => {
+      const headShadow = document.getElementById("headShadow");
+
+      if (window.scrollY > 0) {
+        headShadow.classList.add("headShadow");
+      } else {
+        headShadow.classList.remove("headShadow");
+      }
+    });
+  </script>
 </html>

@@ -8,21 +8,26 @@
 }
 
 body {
+    height: 200vh;
+    scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Noto Sans JP', sans-serif;    
 }
 
 .head {
-    margin: 1rem auto;
+    top: 0;
+    margin: auto;
     position: sticky;
-    border-bottom: 1px solid red;
-    padding-bottom: 1rem;
+}
+
+.headShadow {
+    box-shadow: 0 0 0.25rem #33333353;
 }
 
 nav {
-    padding: 0 2rem;
+    padding: 0.5rem 2rem;
     width: 60%;
-    margin:auto;
+    margin:0.5rem auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content:space-between;
