@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Noto+Sans+JP&display=swap');
 
 * {
     margin: 0;
@@ -14,10 +13,22 @@ body {
     font-family: 'Noto Sans JP', sans-serif;    
 }
 
+body::-webkit-scrollbar {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.3);
+    border-radius: 99999px;
+    border: 0.3125em solid transparent;
+    background-clip: content-box;
+}
+
 .head {
     top: 0;
     margin: auto;
     position: sticky;
+    background:white;
 }
 
 .headShadow {
@@ -81,4 +92,74 @@ nav ul {
     border-radius: 0.5rem;
     background-color: black;
     color:white;
+}
+
+.intro {
+    margin-top: 8rem;
+}
+
+.intro .info {
+    font-family: 'Montserrat', sans-serif;
+    width:40%;
+    margin: auto;
+}
+
+.info h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.info h2 {
+    padding: 1rem 2rem;
+    font-weight: lighter;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.intro .buttons {
+    margin:1rem auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.intro .buttons a {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    text-decoration: none;
+    padding: 0.4rem 0.75rem 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: black;
+    color:white;
+}
+
+.intro .buttons p {
+    display: flex;
+    align-items: center;
+    color: #333333a3;
+    font-size: 0.95em;
+}
+
+.intro .buttons a:last-child {
+    color:black;
+    background-color: white;
+    border: 2px solid #33333352;
+}
+
+.intro h3 {
+    font-weight: lighter;
+    font-size: 1.1rem;
+    margin: 3rem auto 1rem;
+    text-align: center;
+}
+
+.intro .partners {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1.5rem;
 }
