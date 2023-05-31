@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+@media (min-width:600px) {
+    body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+    }
+}
+
+.grid-flow {
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-flow[data-spacing="2rem"] {
+    gap:2rem;
+}
+
+.card {
+    max-width: 46rem;
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    .card {
+        border-radius: 2rem;
+        margin-inline: 1rem;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0 0 1rem black;
+    }
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.result, .sum {
+    padding: 2rem;
+}
+
+.result {
+    text-align: center;
+    padding-inline: 4rem;
+    border-radius: 0 0 2rem 2rem;
+    background-color: lightblue;
+    color: whitesmoke;
+}
+
+@media (min-width:600px){
+    .result {
+        border-radius: 2rem;
+    }
+}
+
+.score {
+    width: 12rem;
+    display: grid;
+    border-radius: 50%;
+    background-color: blue;
+    margin: auto;
+    align-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+.score span {
+    display: block;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
