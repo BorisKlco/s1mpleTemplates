@@ -1,0 +1,133 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (min-width:600px) {
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+}
+
+.flex-group {
+    display: flex;
+    gap:0.25rem;
+    align-items: center;
+}
+
+.grid-flow {
+    display: grid;
+    align-items: start;
+    gap: 1rem;
+}
+
+.grid-flow[data-title-gap="2"] {
+    gap:2rem;
+}
+
+
+.card {
+    max-width: 46rem;
+    display: grid;
+}
+
+@media (min-width:600px) {
+    .card {
+        margin-inline: 1rem;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 2rem;
+        box-shadow: 1rem 1rem 6rem #333;
+    }
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.result,
+.sum {
+    padding: 2rem;
+}
+
+.result {
+    text-align: center;
+    color:whitesmoke;
+    background-color: blue;
+    border-radius: 0 0 2rem 2rem;
+}
+
+@media (min-width:600px) {
+    .result {
+        border-radius: 2rem;
+        padding-inline: 4rem;
+    }
+}
+
+.score {
+    width: 12rem;
+    display: grid;
+    margin: auto; 
+    align-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: darkblue;
+}
+
+.score span {
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.rank {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.75rem;
+    border-radius: 0.33rem;
+    background-color: hsl(var(--item), 0.2);
+}
+
+.item svg,
+.item h3 {
+    color: hsl(var(--item));
+}
+
+.item[data-item="1"] {
+    --item: 240, 100%, 50%;
+}
+.item[data-item="2"] {
+    --item: 120, 100%, 25%;
+}
+.item[data-item="3"] {
+    --item: 300, 100%, 25%;
+}
+.item[data-item="4"] {
+    --item: 0, 100%, 50%;
+}
+
+
+button {
+    height: 3rem;
+    border-radius: 100vh;
+    background-color: blue;
+    color:whitesmoke;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
