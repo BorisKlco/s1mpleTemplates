@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@400;700&display=swap');
+
+:root {
+    --blue: #5767A6;
+    --purple: #B776DF;
+    --red: #FF7D96;
+    --brown:#E8B493;
+    --yellow:#FFEFBD;
+    --gradient: linear-gradient(135deg, var(--purple), var(--blue));
+}
+
 * {
     margin: 0;
     padding:0;
@@ -5,22 +16,46 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-size: 1rem;
+    color:black;
 }
 
-main {
-    
-    
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
 }
 
-
-.left {
-    
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-.right {
-    
-
+button {
+    color: whitesmoke;
+    line-height: 1;
+    background-color: var(--blue) ;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
 }
 
+button:hover,
+button:focus-visible {
+    background: var(--gradient);
+}
+
+.mainBox {
+    max-width: 46rem;
+    display: grid;
+}
+
+@media (min-width:600px) {
+    .mainBox {
+        grid-template-columns: 1fr 1fr;
+    }
+}
