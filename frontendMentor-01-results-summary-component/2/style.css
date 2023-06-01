@@ -28,6 +28,13 @@ body {
     gap:2rem;
 }
 
+.flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
 .card {
     max-width: 46rem;
     display: grid;
@@ -84,4 +91,44 @@ body {
 .rank {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--item), transparent 90%);
+}
+
+.item h3 {
+    color: var(--item)
+}
+
+.item span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--item)
+}
+
+.item[data-item="1"] {
+    --item: blue;
+}
+.item[data-item="2"] {
+    --item: red;
+}
+.item[data-item="3"] {
+    --item: green;
+}
+.item[data-item="4"] {
+    --item: orange;
+}
+
+
+button {
+    height: 3rem;
+    border: none;
+    background-color: lightblue;
+    color:black;
+    border-radius: 100vh;
 }
