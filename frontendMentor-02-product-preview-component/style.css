@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --primaryDark: hsl(158, 36%, 37%);
+    --primaryLight: hsl(30, 38%, 92%);
+
+    --neutralDark: hsl(212, 21%, 14%);
+    --neutralGray: hsl(228, 12%, 48%);
+    --neutralWhite:  hsl(0, 0%, 100%);
+}
+
+img {display: block;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: var(--primaryLight);
+    font-family: 'Fraunces', serif;
+}
+
+
+.card {
+    background-color: var(--neutralWhite);
+    display: grid;
+    max-width: 48rem;
+    min-width:20rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: 2.5rem 2.5rem;
+}
+
+.img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+@media (min-width:600px) {
+    body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }
+    .card {
+        
+        grid-template-columns: 1fr 1fr;
+    }
+    .img img {
+        content: url("./img/img.jpg");
+        border-radius: 1rem 0 0 1rem;
+    }
+    
+}
+
+.category {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color:var(--neutralGray);
+    font-weight: 500;
+}
+
+.name {
+    color:var(--neutralDark);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.description {
+    display: flex;
+    color:var(--neutralGray);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price {
+    font-size: 2.5rem;
+    color: var(--primaryDark);
+    display: flex;
+    align-items: center;
+    gap:1.25rem;
+}
+
+.price span {
+    color:var(--neutralGray);
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.75rem;
+    padding:1.25rem;
+    border:none;
+    border-radius: 0.5rem;
+    font-size:1.10rem;
+    font-weight: 700;
+    color: var(--neutralWhite);
+    background-color: var(--primaryDark);
+}
