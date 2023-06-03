@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+    display: grid;
+    align-items: start;
+    gap: 1rem;
+}
+
+.grid[data-gap="2"] {
+    gap:2rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.card {
+    display: grid;
+    max-width: 46rem;
+    font-size: 1rem;
+}
+
+.result,
+.sum {
+    padding:2rem;
+}
+
+.result {
+    display: grid;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border-radius: 0 0 2rem 2rem;
+}
+
+@media (min-width:600px) {
+    body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem #333;
+    }
+
+    .result {
+        border-radius: 2rem;
+    }
+}
+
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.score {
+    display: grid;
+    align-content: center;
+    margin:auto;
+    width:12rem;
+    border-radius: 50%;
+    background-color: lightblue;
+    aspect-ratio: 1 / 1;
+}
+
+.score span {
+    display: block;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.item {
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 1rem;
+    border-radius: 1.25rem;
+    background-color: color-mix(in srgb, var(--item), transparent 90%);
+    color: var(--item);
+}
+
+.item span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.item[data-item="1"] {
+    --item: blue;
+}
+.item[data-item="2"] {
+    --item: red;
+}
+.item[data-item="3"] {
+    --item: green;
+}
+.item[data-item="4"] {
+    --item: orange;
+}
+
+button {
+    padding: 1.25rem;
+    border:none;
+    border-radius: 10rem;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
