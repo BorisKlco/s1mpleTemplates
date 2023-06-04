@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+	--primePale:hsl(225, 100%, 94%);
+	--primeBright:hsl(245, 75%, 52%);
+	--neutralPale:hsl(225, 100%, 98%);
+	--neutralDesaturated:hsl(224, 23%, 55%);
+	--neutralDark:hsl(223, 47%, 23%);
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+img {display: block;}
+
+body {
+	margin: 1rem;
+	display: grid;
+	font-family: 'Red Hat Display', sans-serif;
+	background-color: color-mix(in srgb, var(--primeBright), transparent 90%);
+}
+
+.card {
+	max-width: 28rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 1rem 2rem -1rem var(--neutralDesaturated);
+}
+
+@media (min-width:600px) {
+	body {
+		height: 100vh;
+		place-content: center;
+	}
+}
+
+.hero {
+	width: 100%;
+	object-fit: cover;
+}
+
+
+.sum {
+	display: grid;
+	gap:1.25rem;
+	padding: 2rem;
+	width:80%;
+	margin:auto;
+}
+
+.title {
+	font-size: 1.75rem;
+	font-weight: 900;
+}
+
+.description {
+	margin:auto;
+	width: 20rem;
+	color: var(--neutralDesaturated);
+}
+
+.sub {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 1rem;
+	border-radius: 1rem;
+	background-color: var(--neutralPale);
+}
+
+.left {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:0.25rem;
+}
+
+.price p {
+	color: var(--neutralDesaturated)
+}
+
+.price p:first-child {
+	color: var(--neutralDark);
+	font-weight: 900;
+}
+
+.sub a {
+	font-weight: 700;
+	color:var(--primeBright);
+	cursor: pointer;
+}
+
+.sub a:hover {
+	opacity: 75%;
+	text-decoration: none;
+}
+
+.sum .pay {
+	border-radius: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+	font-weight: 700;
+	background-color: var(--primeBright);
+	color:white;
+}
+
+.sum .pay:hover {
+	background-color: var(--primeBright);
+	opacity: 75%;
+}
+
+.cancel {
+	padding:1rem;
+	opacity: 75%;
+	text-decoration: none;
+	font-weight: 700;
+	color: var(--neutralDark);
+}
+
+.cancel:hover {
+	opacity: 100%;
+}
