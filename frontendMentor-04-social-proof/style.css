@@ -56,6 +56,7 @@ body {
     border-radius: 0.5rem;
     background-color: var(--neutralLightMagenta);
     margin-bottom: 1rem;
+    max-width: 25rem;
 }
 
 .rating div p {
@@ -79,6 +80,8 @@ body {
 }
 
 .review div {
+    font-weight: 400;
+    max-width: 22rem;
     padding:2rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;;
@@ -130,7 +133,6 @@ body {
 
 @media (min-width:600px) {
     .intro {
-        display: inline-block;
         margin: 2rem 0;
     }
     .intro h1 {
@@ -139,13 +141,24 @@ body {
         margin:1rem 0;
     }
     .intro p {
+        max-width: 24rem;
         font-size: 1rem;
         text-align: left;
         margin:1rem 0;
     }
     
-    .rating {
-        display: inline-block;
+    .rating div {
+        justify-content: unset;
+    }
+
+    .rating div p {
+        display: flex;
+        gap:1rem;
+    }
+
+    .rating div p::before {
+        display: flex;
+        margin: 0 1rem;
     }
     
 }
