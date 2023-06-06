@@ -83,12 +83,16 @@ body {
 
 .review div {
     font-weight: 400;
-    max-width: 22rem;
+    max-width: 20rem;
     padding:2rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;;
     color:var(--White);
     background-color: var(--primeMagenta);
+}
+
+.review div p {
+    font-size: 0.9rem;
 }
 
 .review .person {
@@ -136,8 +140,7 @@ body {
 @media (min-width:600px) {
 
     body {
-        margin-top:10%;
-        margin-left: 20%;
+        margin:0;
     }
 
     .intro {
@@ -193,7 +196,20 @@ body {
     }
 
     .top {
+        max-width: 62rem;
+        margin:0 auto 2rem;
+        gap:4rem;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: flex-start;
+    }
+
+    .review {
+        max-width: 63rem;
+        margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
