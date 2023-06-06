@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 
+:root {
+    --primeMagenta: hsl(300, 43%, 22%);
+    --primePink: hsl(333, 80%, 67%);
+
+    --neutralMagenta: hsl(303, 10%, 53%);
+    --neutralLightMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,31 +16,136 @@
 }
 
 body {
-    display: grid;
-    place-content: center;
-    height: 100vh;
-    gap: 1rem;
     font-family: 'League Spartan', sans-serif;
+    margin: 5rem 1.5rem;
+    background-image: url(./images/bg-pattern-top-mobile.svg);
+    background-repeat: no-repeat;
 }
 
-.intro {
-    grid-area: intro;
 
+.intro {
+    margin:2rem auto;
+}
+
+.intro h1 {
+    color: var(--primeMagenta);
+    font-size: 2.25rem;
+    font-weight: 700;
+    max-width: 15ch;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.intro p {
+    color:var(--neutralMagenta);
+    font-size: 1.175rem;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+    margin: 1rem auto;
+    word-wrap: break-word;
 }
 
 .rating {
-    grid-area: rating;
+}
+
+.rating div {
+    display: grid;
+    justify-content: center;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--neutralLightMagenta);
+    margin-bottom: 1rem;
+}
+
+.rating div p {
+    display: grid;
+    color: var(--primeMagenta);
+    font-weight: 700;
+}
+
+.rating div p::before {
+    content: "";
+    width: 6rem;
+    height: 1rem;
+    margin: 0 auto 1rem;
+    display: block;
+    background-image: url(./images/icon-star.svg);
+    background-repeat: space;
 }
 
 .review {
-    grid-area: review;
+    margin: 3rem 0;
+}
+
+.review div {
+    padding:2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;;
+    color:var(--White);
+    background-color: var(--primeMagenta);
+}
+
+.review .person {
+    padding:0;
+    margin:0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.person img {
+    width: 15%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+.person .name {
+    display: block;
+    text-align: center;
+    line-height: 1.15;
+    padding:0 0 0 1.5rem;
+    margin:0;
+}
+
+.name p:first-child {
+    font-weight: 700;
+}
+
+.name p:last-child {
+    color:var(--primePink);
+}
+
+.quote {
+    line-height: 1.25;
+}
+
+.quote:before {
+    content: open-quote;
+   }
+   
+.quote:after {
+    content: close-quote;
 }
 
 @media (min-width:600px) {
-    body {
-        grid-template-areas: 
-        'intro rating'
-        'review review';
+    .intro {
+        display: inline-block;
+        margin: 2rem 0;
+    }
+    .intro h1 {
+        font-size: 3rem;
+        text-align: left;
+        margin:1rem 0;
+    }
+    .intro p {
+        font-size: 1rem;
+        text-align: left;
+        margin:1rem 0;
+    }
+    
+    .rating {
+        display: inline-block;
     }
     
 }
