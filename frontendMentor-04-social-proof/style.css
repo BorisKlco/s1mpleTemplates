@@ -48,6 +48,7 @@ body {
 }
 
 .rating {
+    padding-top:1rem;
 }
 
 .rating div {
@@ -140,11 +141,15 @@ body {
 @media (min-width:600px) {
 
     body {
-        margin:0;
+        margin:0 1.5rem;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
     }
 
     .intro {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         margin: 0;
     }
     .intro h1 {
@@ -160,7 +165,8 @@ body {
     }
 
     .rating {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
     }
     
     .rating div {
@@ -169,6 +175,8 @@ body {
     }
 
     .rating div p {
+        display: flex;
+        gap:1rem;
         align-items: center;
     }
 
@@ -178,11 +186,6 @@ body {
 
     .rating div:nth-child(3){
         transform: translate(calc(2 * var(--diff)));
-    }
-
-    .rating div p {
-        display: flex;
-        gap:1rem;
     }
 
     .rating div p::before {
@@ -195,10 +198,19 @@ body {
         margin-right: 1rem;
     }
 
+    .review div:nth-child(2){
+        transform: translateY(calc(0.5 * var(--diff)));
+    }
+
+    .review div:nth-child(3){
+        transform: translateY(calc(0.5 * 2 * var(--diff)));
+    }
+
     .top {
         max-width: 62rem;
-        margin:0 auto 2rem;
-        gap:4rem;
+       /* margin:0 auto 2rem;
+        gap:4rem; */
+        padding-bottom: 3rem;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
