@@ -14,13 +14,20 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Fraunces', serif;
     font-family: 'Rubik', sans-serif;
 }
 
+section {
+    background: url(./bg.webp) no-repeat center center ;
+    background-size: cover;
+    min-height: 68vh;
+
+}
+
 .head {
     color: white;
-    background-color: var(--purple);
 }
 
 .logo {
@@ -44,7 +51,7 @@ body {
 }
 
 .head main {
-    padding: 1rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
     margin: 0 auto;
 }
@@ -52,6 +59,7 @@ body {
 .head main h1 {
     font-family: 'Fraunces', serif;
     font-size: 2.5rem;
+    font-weight: 400;
     line-height: 1.1;
 }
 
