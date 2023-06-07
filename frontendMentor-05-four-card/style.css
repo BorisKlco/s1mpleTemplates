@@ -28,6 +28,7 @@ body {
 }
 
 .nadpis {
+    text-align: center;
     padding: 5rem 2.5rem;
     margin:auto;
 }
@@ -46,8 +47,8 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--GrayishBlue);
-    text-align: center;
     padding-top:1rem;
+    max-width: 54ch;
 }
 
 .cards {
@@ -88,10 +89,39 @@ body {
 .card p {
     font-size: 0.85rem;
     font-weight: 400;
-    color: var(--GrayishBlue)
+    color: var(--GrayishBlue);
 }
 
 .card img {
     justify-self: end;
     margin-top: 1rem;
+}
+
+@media (min-width:800px) {
+    .cards {
+        margin-top: -5rem;
+        display: grid;
+        gap:1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr) ;
+    }
+
+    .card[data-color='cyan'] {
+        --cardColor: var(--Cyan);
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    .card[data-color='red'] {
+        --cardColor: var(--Red);
+        transform: translatey(7rem);
+        grid-area: 1 / 2 / 1 / 2;
+    }
+    .card[data-color='orange'] {
+        --cardColor: var(--Orange);
+        transform: translatey(-7rem);
+        grid-area: 3 / 2 / 3 / 2;
+    }
+    .card[data-color='blue'] {
+        --cardColor: var(--Blue);
+        grid-area: 2 / 3 / 2 / 3;
+    }
 }
