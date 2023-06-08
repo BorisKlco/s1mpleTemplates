@@ -28,6 +28,14 @@ section {
 
 }
 
+@media (min-width:600px) {
+    section {
+        background-position: bottom center;
+        min-height: 100vh;
+    }
+    
+}
+
 .head {
     color: white;
 }
@@ -144,5 +152,6 @@ section {
     border-radius: 50%;
     aspect-ratio: 1/1;
     width: 75%;
+    max-width: 24rem;
     z-index: -1;
 }
