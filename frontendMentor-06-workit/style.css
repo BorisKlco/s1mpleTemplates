@@ -100,3 +100,35 @@ section {
 .box p {
     text-align: center;
 }
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.75rem;
+    padding:2rem;
+    margin-inline:1rem;
+    color: white;
+    background-color: var(--purple);
+}
+
+.person h2 {
+    font-family: 'Fraunces', serif; ;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.person p {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.person .button {
+    color: var(--purple);
+    background-color: var(--green);
+    font-weight: 600;
+    max-width: 20ch;
+    padding: 1rem 2rem;
+}
+
