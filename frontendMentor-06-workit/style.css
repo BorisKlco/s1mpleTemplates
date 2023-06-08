@@ -155,3 +155,28 @@ section {
     max-width: 24rem;
     z-index: -1;
 }
+
+footer {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+
+footer .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.socials svg {
+    opacity: 60%;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.socials svg:hover {
+    opacity: 100%;
+}
+
