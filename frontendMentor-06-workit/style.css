@@ -114,6 +114,14 @@ section {
 }
 
 @media (min-width:768px) {
+    .head nav {
+        margin-inline:20%;
+    } 
+
+    .head main h1 {
+        font-size: 3rem;
+    }
+
     article .box {
         display: grid;
         grid-template-columns: 0.1fr 1fr;
@@ -137,6 +145,40 @@ section {
     article .box p {
         text-align: left;
         grid-area: 2 / 2;
+    }
+}
+
+@media (min-width:1280px) {
+
+    .head nav {
+        margin-inline:10%;
+    }
+
+    .head main h1 {
+        font-size: 4rem;
+    }
+
+    article .box {
+        max-width: 30ch;
+        display: flex;
+        gap:2rem;
+        margin:auto;
+        padding:0;
+    }
+
+    article .box span {
+        padding: 1.25rem;
+        height: 1.25rem;
+    }
+
+    article .box p {
+        text-align: center;
+    }
+
+    .info {
+        display: flex;
+        max-width: 75%;
+        margin: auto;
     }
 }
 
@@ -183,6 +225,44 @@ section {
     width: 75%;
     max-width: 24rem;
     z-index: -1;
+}
+
+@media (min-width:1280px) {
+    .personDiv {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.25fr;
+        margin: 5rem auto;
+        justify-items: center;
+        align-items: center;
+    }
+    .person {
+        grid-area: 1 / 2;
+        max-width: 38rem;
+        max-height: 21rem;
+        padding: 4rem;
+        align-items: flex-start;
+    }
+
+    .person h2 {
+        font-size: 2.5rem;
+    }
+
+    .person p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .personImg {
+        transform: translateX(-25rem) translateY(-5rem);
+        grid-area: 1 / 2;
+        margin:0;
+        width: 100%;
+    }
+
+    .info {
+        margin: 10rem auto;
+    }
+
 }
 
 footer {
