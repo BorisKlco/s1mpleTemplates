@@ -28,7 +28,7 @@ section {
 
 }
 
-@media (min-width:600px) {
+@media (min-width:768px) {
     section {
         background-position: bottom center;
         min-height: 100vh;
@@ -71,6 +71,8 @@ section {
     font-size: 2.5rem;
     font-weight: 400;
     line-height: 1.1;
+    max-width: 12ch;
+    margin:auto;
 }
 
 .head main p {
@@ -109,6 +111,33 @@ section {
 
 .box p {
     text-align: center;
+}
+
+@media (min-width:768px) {
+    article .box {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 75%;
+        margin:auto;
+        justify-items: start;
+        align-items: center;
+    }
+
+    article .box span {
+        padding: 1.25rem;
+        height: 1.25rem;
+        grid-area: span 2 / 1;
+    }
+    
+    article .box h2 {
+        grid-area: 1 / 2;
+    }
+
+    article .box p {
+        text-align: left;
+        grid-area: 2 / 2;
+    }
 }
 
 .person {
