@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Satisfy&display=swap');
 
 :root {
     --green: #97CE68; 
@@ -26,7 +26,7 @@ body {
 }
 
 header {
-    background: url(./img/fb/1.webp) no-repeat center center;
+    background: url(./img/fb/2.webp) no-repeat center center;
     background-size: cover;
     min-height: 40vh;
 }
@@ -79,13 +79,23 @@ header {
     margin:auto;
 }
 
+nav {
+    box-shadow: 0 0 0.5rem -0.25rem var(--dark);
+}
+
 header h1 {
     color:var(--white);
     font-size: 1.75rem;
     margin:1rem 1rem;
     text-align: center;
     filter: drop-shadow(0 0 0.1rem var(--dark));
-    text-shadow: 0 0 0.1rem var(--gray);
+    text-shadow: 0 0 0.1rem var(--wapp);
+}
+
+header h1 a {
+    color:var(--white);
+    filter: drop-shadow(0 0 0.1rem var(--dark));
+    text-decoration: var(--wapp) wavy underline;
 }
 
 .buttons {
@@ -131,6 +141,7 @@ header h1 {
     margin: auto;
     text-align: center;
     padding: 2rem;
+    box-shadow: 0 0 0.1rem var(--dark);
 }
 
 .box {
@@ -164,6 +175,8 @@ header h1 {
     justify-content: center;
     padding: 3rem 1rem;
     background-color: color-mix(in srgb, var(--orange), transparent 40%);
+    box-shadow: 0 0 0.1rem var(--dark);
+    
 }
 
 dialog {
@@ -233,4 +246,119 @@ dialog .zavri {
 .fram {
     background: url(./img/fram/10.webp) no-repeat center center;
     background-size: cover;
+}
+
+.bart {
+    background: url(./img/bart/5.webp) no-repeat center center;
+    background-size: cover;
+}
+
+#cvicak {
+    background: url(./img/fb/1.webp) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+@media (min-width:1280px) {
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 4vh;
+        margin-bottom: 20rem;
+    }
+
+    header {
+        background: url(./img/fb/2.webp) no-repeat center center;
+        background-size: cover;
+        min-height: 100vh;
+    }
+
+    .meno {
+        font-size: 4rem;
+    }
+
+    .socials {
+        gap:2rem;
+    }
+
+    .socials a svg {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    header h1 {
+        font-size: 4rem;
+        margin:1rem 1rem;
+    }
+
+    header h1:first-of-type {
+        font-size: 8rem;
+        margin:1rem 1rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        gap:6rem;
+        padding: 6rem 0;
+    }
+
+    .buttons a {
+        font-size: 2.25rem;
+        padding: 1rem 4rem;
+    }
+
+    #sluzby {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline: 25%;
+    }
+
+    .box {
+        margin: 1rem auto;
+        padding:2.25rem;
+        max-width: 28rem;
+    }
+    
+    .box img {
+        width: 6rem;
+        height: 6rem;
+        margin:auto;
+    }
+
+    .box h2 {
+        font-size: 2.25rem;
+    }
+
+    .box p {
+        font-size: 1.25rem;
+    }
+
+
+    .galeria {
+        max-width: 36rem;
+    }
+
+    dialog {
+        padding:5rem 8rem;
+        margin: auto;
+        width: 60%;
+        height: 100%;
+        font-size: 4.25rem;
+    }
+
+    dialog .zavri {
+        margin: 3rem auto;
+    }
+
+    .images {
+        gap:3rem;
+        margin:auto;
+        max-height: auto;
+        max-width: 80%;
+    }
+
 }
