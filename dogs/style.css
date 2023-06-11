@@ -154,3 +154,77 @@ header h1 {
 .box h2 {
     font-size: 1.25rem;
 }
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap:3rem;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: color-mix(in srgb, var(--orange), transparent 40%);
+}
+
+dialog {
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--dark);
+    background-color: var(--gray);
+    padding:10%;
+    margin: auto;
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color:white;
+}
+
+dialog .zavri {
+    max-width: 50%;
+    font-size: 1.25rem;
+    margin: 1rem auto;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: var(--orange);
+    filter: drop-shadow(0 0 0.1rem var(--dark));
+}
+
+.galeria {
+    display: grid;
+    place-content: center;
+    width: 75%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem -0.25rem var(--dark);
+}
+
+.nazovGalerie {
+    color: var(--white);
+    font-size: 3rem;
+    filter: drop-shadow(0 0 0.1rem var(--dark));
+    text-shadow: 0 0 0.1rem var(--gray);
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    max-height: auto;
+    max-width: 100%;
+}
+
+
+.hoverGaleria:hover {
+    transform: scale(1.05);
+    transition-duration: .2s;
+}
+
+.faron {
+    background: url(./img/faron/44.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.fram {
+    background: url(./img/fram/10.webp) no-repeat center center;
+    background-size: cover;
+}
