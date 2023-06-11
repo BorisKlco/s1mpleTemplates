@@ -361,4 +361,10 @@ dialog .zavri {
         max-width: 80%;
     }
 
+    #cvicak {
+        background: url(./img/bg-desktop.webp) no-repeat top center;
+        background-size: cover;
+        height: 100vh;
+    }
+
 }
