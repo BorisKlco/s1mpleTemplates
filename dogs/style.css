@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Satisfy&display=swap');
 
+:root {
+    --green: #97CE68; 
+    --orange: #FF9900; 
+    --red: #FF6766; 
+    --white: #EEFFF9; 
+    --gray: #BDBAB4;
+    --dark:#011C26; 
+    --fb:#3b5998;
+    --wapp:#25D366;
+}
+
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 img {display: block;}
 
 body {
     font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
+    
 }
 
 header {
-    background: url(./img/bg.webp) no-repeat center center;
+    background: url(./img/fb/1.webp) no-repeat center center;
     background-size: cover;
     min-height: 40vh;
 }
@@ -24,15 +36,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
-    background-color: color-mix(in srgb, #333, transparent 40%);
-    box-shadow: 0 0 0.5rem #333;
+    background-color: color-mix(in srgb, var(--gray), transparent 10%);
 }
 
 .meno {
-    color: white;
+    color: var(--white);
     font-family: 'Satisfy', cursive;
     font-size: 2rem;
     font-weight: bold;
+    filter: drop-shadow(0 0 0.1rem var(--dark));
 }
 
 .socials {
@@ -41,19 +53,24 @@ nav {
 }
 
 .socials a svg {
-    color:white;
     height: 2rem;
     width: 2rem;
+    filter: drop-shadow(0 0 0.05rem var(--dark));
+}
+
+.fb svg {
+    color:var(--fb);
 }
 
 .fb svg:hover {
-    color:#3b5998;
     transform: scale(1.1);
     transition-duration: .2s;
 }
 
+.wapp svg {
+    color:var(--wapp);
+}
 .wapp svg:hover {
-    color:#25D366;
     transform: scale(1.1);
     transition-duration: .2s;
 }
@@ -63,11 +80,12 @@ header {
 }
 
 header h1 {
-    color:whitesmoke;
+    color:var(--white);
     font-size: 1.75rem;
     margin:1rem 1rem;
     text-align: center;
-    text-shadow: 0 0 0.25rem black;
+    filter: drop-shadow(0 0 0.1rem var(--dark));
+    text-shadow: 0 0 0.1rem var(--gray);
 }
 
 .buttons {
@@ -82,28 +100,57 @@ header h1 {
 
 .buttons a {
     text-decoration: none;
-    color:white;
+    color:var(--white);
     font-size: 1.25rem;
     font-weight: 700;
     padding: 0.5rem 2rem;
-    text-shadow: 0 0 0.25rem black;
     background-color: var(--color);
-    border: 1px solid var(--color);
     border-radius: 0.25rem;
     box-shadow: 0 0 0.5rem -0.25rem black;
 }
 
 .buttons a[data-type="sluzby"] {
-    --color:#25D366;
+    --color:var(--green);
 }
 .buttons a[data-type="galeria"] {
-    --color:#3b5998;
+    --color:var(--orange);
 }
 .buttons a[data-type="cvicak"] {
-    --color:red;
+    --color:var(--red);
 }
 
 .buttons a:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 0.1rem var(--dark));
     transition-duration: .2s;
+}
+
+#sluzby {
+    background-color: var(--green);
+    color: var(--dark);
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin:2rem auto;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--gray), transparent 40%);
+    box-shadow: 0 0 0.5rem -0.25rem var(--dark);
+}
+
+.box .material-symbols-rounded {
+    font-size: 4rem;
+    color: var(--red);
+    filter: drop-shadow(0 0 0.05rem var(--dark));
+
+}
+
+.box h2 {
+    font-size: 1.25rem;
 }
