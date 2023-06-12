@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img {display: block;}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color:var(--DarkSlateGrey);
+}
+
+main img {
+    width: 100%;
+}
+
+.sub {
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    margin:2rem 1rem;
+}
+
+.sub h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.checklist p {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    font-size: 1rem;
+}
+
+.checklist p::before {
+    display: flex;
+    content: url(./assets/images/icon-success.svg);
+    transform: scale(0.35);
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+form div p {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+form div span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--Tomato);
+}
+
+form input {
+    border: none;
+    outline: 1px solid var(--Grey);
+    border-radius: 0.5rem;
+    width: 100%;
+    padding:1rem 1rem;
+}
+
+form input:focus {
+    border: none;
+    outline: 1px solid var(--CharcoalGrey);
+    filter: drop-shadow(0 0.1rem 0.1rem var(--Grey));
+}
+
+form button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--DarkSlateGrey);
+}
+
+form button:hover {
+    background-image: linear-gradient(135deg, var(--Tomato), orange);
+    filter: drop-shadow(0 0.5rem 1rem var(--Grey));
+}
