@@ -15,7 +15,7 @@
     </title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
       <div class="sub">
         <h1>Stay updated!</h1>
@@ -25,23 +25,60 @@
           <p>Measuring to ensure updates are a success</p>
           <p>And much more!</p>
         </div>
-        <form action="">
+        <div class="form">
           <div>
             <p>Email address</p>
-            <span>Valid email required</span>
+            <span id="wrongMail">Valid email required</span>
           </div>
-          <input type="email" placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
-        </form>
+          <input
+            id="email"
+            class=""
+            type="email"
+            placeholder="email@company.com"
+          />
+          <button onclick="validation()">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
       </div>
     </main>
 
-    <!-- Success message start -->
+    <div id="confirm" style="display: none">
+      <div>
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span id="confirmedMail"></span>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+      </div>
 
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
-
-    <!-- Success message end -->
+      <a href="../">Dismiss message</a>
+    </div>
   </body>
+
+  <script>
+    const validation = () => {
+      const mail = document.getElementById("email");
+      const wrongMail = document.getElementById("wrongMail");
+      const mailValidation = (email) => {
+        const re =
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      };
+
+      const main = document.getElementById("main");
+      const confirm = document.getElementById("confirm");
+      const confirmedMail = document.getElementById("confirmedMail");
+
+      if (mailValidation(mail.value)) {
+        main.style.display = "none";
+        confirmedMail.textContent = mail.value;
+        confirm.style.display = "flex";
+      } else {
+        wrongMail.style.display = "block";
+        mail.classList.add("wrongMail");
+      }
+    };
+  </script>
 </html>

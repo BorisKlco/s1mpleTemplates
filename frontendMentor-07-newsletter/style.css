@@ -60,29 +60,36 @@ main img {
     width: 2rem;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     gap:0.5rem;
 }
 
-form div {
+.form div {
     display: flex;
     justify-content: space-between;
 }
 
-form div p {
+.form div p {
     font-size: 0.75rem;
     font-weight: 700;
 }
 
-form div span {
+#wrongMail {
+    display: none;
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--Tomato);
 }
 
-form input {
+.wrongMail {
+    background-color: color-mix(in srgb, var(--Tomato), transparent 80%);
+    font-weight: 700;
+    color: var(--Tomato);
+}
+
+.form input {
     border: none;
     outline: 1px solid var(--Grey);
     border-radius: 0.5rem;
@@ -90,13 +97,12 @@ form input {
     padding:1rem 1rem;
 }
 
-form input:focus {
+.form input:focus {
     border: none;
     outline: 1px solid var(--CharcoalGrey);
-    filter: drop-shadow(0 0.1rem 0.1rem var(--Grey));
 }
 
-form button {
+.form button {
     border: none;
     border-radius: 0.5rem;
     padding: 1.25rem;
@@ -107,7 +113,53 @@ form button {
     background-color: var(--DarkSlateGrey);
 }
 
-form button:hover {
+.form button:hover {
     background-image: linear-gradient(135deg, var(--Tomato), orange);
     filter: drop-shadow(0 0.5rem 1rem var(--Grey));
+}
+
+#confirm {
+    animation: fadeIn 0.4s;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50%;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+#confirm div {
+    margin: 2rem 2rem;
+}
+
+#confirm h1::before {
+    display: block;
+    content: url(./assets/images/icon-success.svg);
+    margin:1rem 0;
+}
+
+#confirm h1 {
+    font-size: 2.25rem;
+    margin: 1rem 0;
+}
+
+#confirm span {
+    font-weight: 700;
+}
+
+#confirm a {
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-inline: 2rem;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--DarkSlateGrey);
+
 }
