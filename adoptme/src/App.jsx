@@ -4,7 +4,7 @@ import Search from "./Search";
 const App = () => {
     return (
         <div>
-            <h1>Hi</h1>
+            <h1>React v8</h1>
             <Search />
         </div>
     )
