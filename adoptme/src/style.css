@@ -1,0 +1,42 @@
+
+body {
+    display: grid;
+    place-content: center;
+    background-image: url(https://cdn.wallpapersafari.com/19/18/FDSBak.jpg);
+}
+
+.search-params {
+    filter: blur(0px);
+
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 0.25rem -0.10rem #333;
+}
+
+.search-params form {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.search-params form label {
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.search-params form input {
+    padding:0.25rem 0.5rem;
+}
+
+.search-params form button {
+    width: 8rem;
+    padding: 0.25rem 1rem;
+    margin: auto;
+    border-radius: 0.25rem;
+    background-color: red;
+    color:white;
+    font-size: 1.25rem;
+}
