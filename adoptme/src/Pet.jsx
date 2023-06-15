@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Pet = (prop) => {
   return (
     <div>
@@ -6,10 +8,9 @@ const Pet = (prop) => {
         {prop.animal} - {prop.breed}
       </p>
       <p>{prop.location}</p>
-      {/*       {prop.images.map((img) => (
-        <img src={img} key={img} alt={img} />
-      ))} */}
-      <img src={prop.images[0]} key={prop.images[0]} alt={prop.images[0]} />
+      <Link to={`/details/${prop.id}`}>
+        <img src={prop.images[0]} key={prop.images[0]} alt={prop.images[0]} />
+      </Link>
     </div>
   );
 };
