@@ -8,9 +8,12 @@ const Card = ({ props }) => {
       className="videoImg"
       key={props.id}
     >
-      <img src={props.images[0].url} alt={props.title} />
+      <img
+        className={info ? "contrast" : ""}
+        src={props.images[0].url}
+        alt={props.title}
+      />
       <p>
-        Duration:
         {Math.floor(props.duration / 3600)
           ? Math.floor(props.duration / 3600) +
             "h " +
@@ -18,7 +21,6 @@ const Card = ({ props }) => {
             "m"
           : Math.floor((props.duration % 3600) / 60) + "m"}
       </p>
-      {info ? <p>{props.description}</p> : <p>{props.title}</p>}
     </div>
   );
 };

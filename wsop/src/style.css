@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Tilt+Prism&family=Ubuntu&display=swap');
 
 *{
     margin:0;
@@ -17,7 +17,6 @@ body {
 }
 
 header {
-    
     margin:1rem auto;
     text-align: center;
 }
@@ -30,11 +29,19 @@ header {
 }
 
 .info h2 {
-    font-size: 3rem;
+    font-size: 6rem;
+    text-shadow: 0 0 1rem red;
     font-family: 'Tilt Prism', cursive;
 }
 
+.info h2:hover {
+    text-shadow: 0 0 1rem orange;
+    filter:drop-shadow(0 0 0.1rem red) brightness(110%) contrast(110%);
+    transition-duration: 0.5s;
+}
+
 .info h3 {
+    margin-top: 1rem;
     font-size: 1.75rem;
 }
 
@@ -49,11 +56,13 @@ header {
 }
 
 .videoImg {
+    position: relative;
     max-width: 26rem;
     display: grid;
     padding:1rem;
     background: linear-gradient(324deg, rgba(62,33,35,0.5606617647058824) 0%, rgba(212,186,133,1) 67%);
     border-radius: 0.25rem;
+    z-index: 0;
 }
 
 .videoImg img {
@@ -64,11 +73,24 @@ header {
 .videoImg:hover{
     transform: scale(1.05);
     transition-duration: 0.2s;
-    filter: drop-shadow(0 0 1rem black);
+    filter: drop-shadow(0 0 1rem #333);
 }
 
 .videoImg p {
+    font-family: 'Ubuntu', sans-serif;
+    color: bisque ;
+    background-color: #333;
+    border-radius: 0.5rem;
+    padding:0.25rem 1rem;
+    margin: 1.5rem;
+    font-size: 1.5rem;
     overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     text-overflow: ellipsis;
-    white-space: nowrap;
+}
+
+.contrast {
+    filter: contrast(150%);
 }
