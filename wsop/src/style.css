@@ -98,3 +98,10 @@ header {
     transition-duration: 0.3s;
 }
 
+dialog {
+    padding:5rem 8rem;
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    font-size: 4.25rem;
+}

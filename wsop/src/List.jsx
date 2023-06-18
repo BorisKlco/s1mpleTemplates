@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 import Card from "./Card";
 import fetchEvents from "./fetchEvents";
 
@@ -16,7 +17,9 @@ const List = () => {
 
       <div className="list">
         {data.data.collection_collection[0].entities.map((video) => (
-          <Card props={video} key={video.id} />
+          <Link to={`/${video.source}`} key={video.id}>
+            <Card props={video} key={video.id} />
+          </Link>
         ))}
       </div>
     </>
