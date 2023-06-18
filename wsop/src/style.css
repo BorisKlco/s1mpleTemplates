@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Tilt+Prism&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img {display: block;}
+
+body {
+    font-family: 'Diphylleia', serif;
+    background-color: bisque;
+    display: grid;
+    place-content: center;
+    gap:1rem;
+}
+
+header {
+    margin:1rem auto;
+    text-align: center;
+}
+
+.info {
+    padding:2rem;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 3rem;
+    font-family: 'Tilt Prism', cursive;
+}
+
+.info h3 {
+    font-size: 1.75rem;
+}
+
+.list {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.list img {
+    max-width: 12rem;
+}
