@@ -13,7 +13,7 @@ const Card = ({ props }) => {
         src={props.images[0].url}
         alt={props.title}
       />
-      <p>
+      <p className={info ? "contrast" : ""}>
         {Math.floor(props.duration / 3600)
           ? Math.floor(props.duration / 3600) +
             "h " +
