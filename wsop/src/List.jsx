@@ -15,9 +15,9 @@ const List = () => {
 
       <div className="list">
         {data.data.collection_collection[0].entities.map((video) => (
-          <div key={video.id}>
+          <div className="videoImg" key={video.id}>
+            <img src={video.images[0].url} alt={video.title} />
             <p>{video.title}</p>
-            <img src={video.images[0].url} alt="" />
           </div>
         ))}
       </div>

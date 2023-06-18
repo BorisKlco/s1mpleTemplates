@@ -17,11 +17,14 @@ body {
 }
 
 header {
+    
     margin:1rem auto;
     text-align: center;
 }
 
 .info {
+    max-width: 65%;
+    margin:auto;
     padding:2rem;
     text-align: center;
 }
@@ -36,12 +39,29 @@ header {
 }
 
 .list {
+    margin:auto;
     padding: 2rem;
     display: flex;
-    gap: 2rem;
+    justify-content: center;
+    gap: 1.75rem;
     flex-wrap: wrap;
+    max-width: 75%;
 }
 
-.list img {
-    max-width: 12rem;
+.videoImg {
+    display: grid;
+    padding:1rem;
+    background-color: lightgrey;
+    border-radius: 0.25rem;
+}
+
+.videoImg img {
+    max-width: 24rem;
+    border-radius: 0.25rem;
+}
+
+.videoImg:hover{
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+    filter: drop-shadow(0 0 1rem black);
 }
