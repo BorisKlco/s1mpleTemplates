@@ -10,7 +10,7 @@ img {display: block;}
 
 body {
     font-family: 'Diphylleia', serif;
-    background-color: bisque;
+    background-color: burlywood;
     display: grid;
     place-content: center;
     gap:1rem;
@@ -56,11 +56,12 @@ header {
 }
 
 .videoImg {
+
     position: relative;
     max-width: 26rem;
     display: grid;
     padding:1rem;
-    background: linear-gradient(324deg, rgba(62,33,35,0.5606617647058824) 0%, rgba(212,186,133,1) 67%);
+    background: linear-gradient(277deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     border-radius: 0.25rem;
     z-index: 0;
 }
