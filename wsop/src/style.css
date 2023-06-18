@@ -49,9 +49,10 @@ header {
 }
 
 .videoImg {
+    max-width: 26rem;
     display: grid;
     padding:1rem;
-    background-color: lightgrey;
+    background: linear-gradient(324deg, rgba(62,33,35,0.5606617647058824) 0%, rgba(212,186,133,1) 67%);
     border-radius: 0.25rem;
 }
 
@@ -64,4 +65,10 @@ header {
     transform: scale(1.05);
     transition-duration: 0.2s;
     filter: drop-shadow(0 0 1rem black);
+}
+
+.videoImg p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
