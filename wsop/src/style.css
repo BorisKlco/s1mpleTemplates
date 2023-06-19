@@ -98,10 +98,24 @@ header {
     transition-duration: 0.3s;
 }
 
-dialog {
-    padding:5rem 8rem;
-    margin: auto;
-    width: 60%;
-    height: 100%;
-    font-size: 4.25rem;
+.videoPlayer {
+    display: grid;
+    place-content: center;
+    max-width: 50%;
+    margin:auto;
+    gap:2rem;
+}
+
+.videoPlayer h1 {
+    font-size: 4rem;
+    text-shadow: 0 0 1rem red;
+    font-family: 'Tilt Prism', cursive;
+    margin-top:1rem;
+    text-align: center;
+}
+
+.videoPlayer h3 {
+    font-size: 1.25rem;
+    margin:1rem auto;
+    max-width: 90%;
 }

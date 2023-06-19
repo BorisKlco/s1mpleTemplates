@@ -16,8 +16,8 @@ const List = () => {
       </div>
 
       <div className="list">
-        {data.data.collection_collection[0].entities.map((video) => (
-          <Link to={`/${video.source}`} key={video.id}>
+        {data.data.collection_collection[0].entities.map((video, index) => (
+          <Link to={`/${index}`} key={video.id}>
             <Card props={video} key={video.id} />
           </Link>
         ))}
