@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+.ball {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  background-color: red;
+  border-radius: 100%;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
